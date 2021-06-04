@@ -1,0 +1,16 @@
+{% extends 'pollman/main.html' %} {% block content %}
+
+<h1>{{ question.question_text }}</h1>
+<br />
+<hr />
+<br />
+
+{% for choice in question.choice_set.all %}
+
+<div class="card card-body" style="font-weight: bold">{{ choice.choice_text }} <span class="text-primary">{{ choice.votes }} vote{{ choice.votes|pluralize }}</span></div>
+
+{% endfor %}
+
+<a class="form-control btn btn-secondary" href="{% url 'pollman:detail' question.id %}">Vote again?</a>
+
+{% endblock %}
