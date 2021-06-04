@@ -1,3 +1,3 @@
 # polling-app
 
-Tech-stack : Django, SQLite
+Tech-stack : Django, Bootstrap
